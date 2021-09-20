@@ -13,6 +13,13 @@ export class HomeComponent implements OnInit {
 
   constructor(private service: PokemonsService) { }
 
+  onScrollDown(): void {
+    let offset = this.pokemons.length
+    this.service.list(offset).then(observables => 
+      observables.map(elem => 
+        elem.subscribe(data => this.pokemons.push(data))))
+  }
+
   ngOnInit(): void {
     this.service.list().then(promises => promises.map(elem => elem.subscribe(data => this.pokemons.push(data))))
   }

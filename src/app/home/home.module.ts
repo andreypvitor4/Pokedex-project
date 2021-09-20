@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll'
 import { HomeComponent } from './home.component';
 import { CardComponent } from './card/card.component';
-
-
 
 @NgModule({
   declarations: [
@@ -11,10 +11,12 @@ import { CardComponent } from './card/card.component';
     CardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    InfiniteScrollModule,
+    HttpClientModule,
   ],
   exports: [
-    CardComponent
+    HomeComponent,
   ]
 })
 export class HomeModule { }
