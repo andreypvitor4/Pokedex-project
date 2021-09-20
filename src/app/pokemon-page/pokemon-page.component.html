@@ -1,0 +1,8 @@
+<div class="container">
+  <h1> {{ pokemon.name }}</h1>
+
+  <div class="details"> 
+    <pokemon-details [pokemon]="pokemon"></pokemon-details>
+    <pokemon-status [stats]="pokemon.stats"></pokemon-status>
+  </div>
+</div>

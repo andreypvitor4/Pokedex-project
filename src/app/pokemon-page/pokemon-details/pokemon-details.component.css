@@ -1,0 +1,110 @@
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.size {
+  display: flex;
+}
+.size div {
+  margin: 10px;
+}
+.exp {
+  margin: 5px 10px;
+}
+
+.imageContainer {
+  width: 100%;
+}
+.imageContainer img {
+  width: 100%;
+}
+
+
+
+
+
+.types {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.type {
+  padding: 8px;
+  margin: 0px 5px;
+  margin-top: 5px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.normalDesc {
+  background-color: rgb(218, 218, 218);
+}
+.fightingDesc {
+  background-color: #faa759;
+}
+.flyingDesc {
+  background-color: rgb(177, 252, 247);
+}
+.poisonDesc {
+  background-color: rgb(146, 47, 212);
+  color: #eee;
+}
+.groundDesc {
+  background-color: rgb(160, 123, 123);
+}
+.rockDesc {
+  background-color: rgb(141, 136, 136);
+}
+.bugDesc {
+  background-color: rgb(160, 197, 158);
+}
+.ghostDesc {
+  background-color: #eee;
+}
+.steelDesc {
+  background-color: rgb(155, 155, 155);
+}
+.fireDesc {
+  background-color: rgb(255, 73, 73);
+  color: #eee;
+}
+.waterDesc {
+  background-color: rgb(59, 149, 253);
+}
+.grassDesc {
+  background-color: rgb(73, 189, 65);
+}
+.electricDesc {
+  background-color: rgb(255, 255, 11);
+}
+.psychicDesc {
+  background-color: rgb(115, 108, 172);
+}
+.iceDesc {
+  background-color: rgb(182, 199, 255);
+}
+.dragonDesc {
+  background-color: rgb(221, 170, 170);
+}
+.darkDesc {
+  background-color: rgb(85, 85, 124);
+}
+.fairyDesc {
+  background-color: rgb(250, 108, 217);
+}
+.unknownDesc {
+  background-color: white;
+}
+.shadowDesc {
+  background-color: rgb(139, 139, 139);
+}

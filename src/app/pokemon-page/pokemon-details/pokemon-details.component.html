@@ -1,0 +1,21 @@
+<div class="container">
+
+  <div class="info">
+    <div class="size">
+      <div>Atulra: {{ pokemon.height }}</div>
+      <div>Peso: {{ pokemon.weight }}</div>
+    </div>
+    <div class="exp">Experiência base: {{ pokemon.base_experience }}</div>
+  </div>
+
+  <div class="imageContainer">
+    <img [src]="pokemon.sprites.other['official-artwork'].front_default" [alt]="pokemon.name">
+  </div>
+
+  <div class="types">
+    <span *ngFor="let type of pokemon.types">
+      <div [class]="['type', type.type.name + 'Desc']" > {{ type.type.name }} </div>
+    </span>
+  </div>
+
+</div>

@@ -3,7 +3,9 @@
   <div class="cardsContainer" infiniteScroll [infiniteScrollDistance]="1" (scrolled)="onScrollDown()">
 
     <span *ngFor="let pokemon of pokemons">
-      <app-card [pokemon]="pokemon"></app-card>
+      <a [routerLink]="['pokemon', pokemon.id]">
+        <card [pokemon]="pokemon"></card>
+      </a>
     </span>
 
   </div>

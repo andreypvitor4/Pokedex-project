@@ -1,0 +1,17 @@
+import { Component, Input, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'pokemon-status',
+  templateUrl: './pokemon-status.component.html',
+  styleUrls: ['./pokemon-status.component.css']
+})
+export class PokemonStatusComponent implements OnInit {
+
+  @Input() stats: any
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

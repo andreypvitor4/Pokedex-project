@@ -6,11 +6,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { HomeModule } from './home/home.module';
+import { PokemonPageModule } from './pokemon-page/pokemon-page.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -18,6 +19,7 @@ import { HomeModule } from './home/home.module';
     FontAwesomeModule,
     HttpClientModule,
     HomeModule,
+    PokemonPageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
