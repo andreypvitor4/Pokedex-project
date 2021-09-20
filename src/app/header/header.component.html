@@ -1,0 +1,23 @@
+<header>
+  <div class="logo">
+    <div class="imageContainer">
+      <img src="../../assets/images/pokeball.png" alt="Imagem de Alanyadk por Pixabay">
+    </div>
+    <span>Pokedéx</span>
+  </div>
+
+    <fa-icon 
+      [icon]="faBars" 
+      class="hambIcon"
+      (click)="onToggleMenuMobile()"
+      [style.transform]="menuMobileDisplay? 'rotate(90deg)': 'rotate(0deg)'"
+    >
+    </fa-icon>
+  
+  <nav [class.activeMenuMobile]="menuMobileDisplay">
+    <ul>
+      <li>Home</li>
+      <li>Pokemon aleatório</li>
+    </ul>
+  </nav>
+</header>

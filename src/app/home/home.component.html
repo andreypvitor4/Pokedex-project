@@ -1,0 +1,28 @@
+<div class="container">
+
+  <div class="cardsContainer">
+
+    <span *ngFor="let pokemon of pokemons">
+
+      <div [class]="['card', pokemon.types[0].type.name] " >
+        <div class="name"> <span>{{ pokemon.id }}.</span> {{ pokemon.name }}</div>
+        <div class="imageBackground"></div>
+        <div class="image">
+          <img [src]="pokemon.sprites.other['official-artwork'].front_default" alt="pikachu">
+        </div>
+        <div class="types">
+          <span *ngFor="let type of pokemon.types">
+            <div [class]="['type', type.type.name + 'Desc']" > {{ type.type.name }} </div>
+          </span>
+        </div>
+      </div>
+
+
+    </span>
+
+
+  </div>
+
+  <!-- <app-card></app-card> -->
+
+</div>
