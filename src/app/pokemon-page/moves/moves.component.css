@@ -1,0 +1,20 @@
+* {
+  color: #eee;
+}
+
+p {
+  padding: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+p:hover {
+  color: #222;
+  background-color: #eee;
+}
+
+@media (max-width: 700px) {
+  p {
+    color: #222;
+    background-color: #eee;
+  }
+}

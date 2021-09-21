@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PokemonStatusComponent implements OnInit {
 
   @Input() stats: any
+  @Input() baseExp!: string
 
   constructor() { }
 

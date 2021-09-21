@@ -1,0 +1,34 @@
+
+<span *ngIf="type === 'ability'">
+  <div>Efeito:</div>
+  <p *ngIf="moveOrAbility.effect_entries[0].language.name === 'en'">
+    {{ moveOrAbility.effect_entries[0].short_effect }}
+  </p>
+  <p *ngIf="moveOrAbility.effect_entries[1].language.name === 'en'">
+    {{ moveOrAbility.effect_entries[1].short_effect }}
+  </p>
+</span>
+
+<span *ngIf="type === 'move'">
+  <div> Nome: {{ moveOrAbility.name }} </div>
+  <div> Precisão: {{ moveOrAbility.accuracy || 'não utiliza' }} </div>
+  <div> Classe de dano: {{ moveOrAbility.damage_class.name || 'não utiliza' }} </div>
+  <div> Poder: {{ moveOrAbility.power || 'não utiliza' }} </div>
+  <div> Prioridade: {{ moveOrAbility.priority || 'não utiliza' }} </div>
+  <div> Alvo: {{ moveOrAbility.target.name || 'não utiliza' }} </div>
+  <div> Tipo: {{ moveOrAbility.type.name || 'não utiliza' }} </div>
+  <div> Efeito: {{ moveOrAbility.effect_entries[0].short_effect || 'não utiliza' }} </div>
+</span>
+
+<span *ngIf="type === 'item'">
+  <div> Nome: {{ moveOrAbility.name }} </div>
+  <div> 
+    Aparência: 
+    <div class="itemImageDiv">
+      <img [src]="moveOrAbility.sprites.default" [alt]="moveOrAbility.name">
+    </div> 
+  </div>
+  <div> Efeito de arremesso: {{ moveOrAbility.fling_effect.name || 'não utiliza' }} </div>
+  <div> Poder de arremesse: {{ moveOrAbility.fling_power || 'não utiliza' }} </div>
+  <div> Efeito: {{ moveOrAbility.effect_entries[0].short_effect || 'não utiliza' }} </div>
+</span>

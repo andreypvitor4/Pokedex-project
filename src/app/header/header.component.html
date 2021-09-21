@@ -1,9 +1,9 @@
 <header>
   <div class="logo">
-    <div class="imageContainer">
+    <a class="imageContainer" routerLink="">
       <img src="../../assets/images/pokeball.png" alt="Imagem de Alanyadk por Pixabay">
-    </div>
-    <span>Pokedéx</span>
+    </a>
+    <a routerLink="">Pokedéx</a>
   </div>
 
     <fa-icon 
@@ -16,8 +16,8 @@
   
   <nav [class.activeMenuMobile]="menuMobileDisplay">
     <ul>
-      <li>Home</li>
-      <li>Pokemon aleatório</li>
+      <li (click)="onToggleMenuMobile()"> <a class="link" routerLink="">Home</a> </li>
+      <li (click)="goToRandomPokemon()" (click)="onToggleMenuMobile()"> Pokemon aleatório </li>
     </ul>
   </nav>
 </header>

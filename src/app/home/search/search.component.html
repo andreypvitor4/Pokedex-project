@@ -1,0 +1,14 @@
+<form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)">
+  <div class="search">
+    <input  type="text" id="search" placeholder="Nome completo ou Nº do pokemon" ngModel name="search">
+    <label for="search">
+      <fa-icon [icon]="faSearch" class="searchIcon"></fa-icon>
+    </label>
+    
+  </div>
+</form>
+
+<div class="errorMessage" [style.opacity]="showError? '100%' : '0%' ">
+  <span>Pokemon não encontrado. Digite o nome completo ou o número.</span>
+</div>
+

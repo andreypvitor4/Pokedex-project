@@ -3,6 +3,24 @@
 
   <div class="details"> 
     <pokemon-details [pokemon]="pokemon"></pokemon-details>
-    <pokemon-status [stats]="pokemon.stats"></pokemon-status>
+    <pokemon-status [stats]="pokemon.stats" [baseExp]="pokemon.base_experience"></pokemon-status>
+  </div>
+
+  <div class="pokeAgendaContainer">
+    <div class="pokeScreenBorder">
+      <div class="pokeScreen">
+        <a [routerLink]="['/pokemon', pokemon.id]">
+          <div class="pokemonsImageDiv">
+            <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
+          </div>
+        </a>
+        <div class="screenContent">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+    <div class="pokeAgendaImageDiv">
+      <img src="../../assets/images/pokeAgenda.png" alt="poke agenda">
+    </div>
   </div>
 </div>

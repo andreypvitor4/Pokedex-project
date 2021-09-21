@@ -1,0 +1,15 @@
+* {
+  color: #eee;
+}
+
+div {
+  margin: 5px 0px;
+}
+
+.itemImageDiv {
+  margin: 0px auto;
+  width: 50px;
+}
+.itemImageDiv img {
+  width: 100%;
+}

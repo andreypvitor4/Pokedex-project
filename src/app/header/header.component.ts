@@ -1,5 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,13 +8,21 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   faBars = faBars
   menuMobileDisplay = false
+  router
 
-  constructor() { }
+  constructor(router: Router) {
+    this.router = router
+   }
 
   onToggleMenuMobile(): void {
     this.menuMobileDisplay = !this.menuMobileDisplay
+  }
+
+  goToRandomPokemon(): void {
+    this.router.navigate([`/pokemon/${Math.floor(Math.random()*898 + 1)}`])
   }
 
   ngOnInit(): void {

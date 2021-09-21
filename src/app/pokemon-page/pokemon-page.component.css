@@ -3,16 +3,107 @@
   margin: auto;
   margin-top: 50px;
   padding: 20px;
-  border-radius: 2px;
-  background-color: rgb(226, 226, 226);
+  border-radius: 5px;
+  background-color: rgba(184, 184, 184, 0.253);
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 4px solid #333;
 }
 h1 {
   color: #333;
+  font-size: 36px;
+  margin-bottom: 50px;
 }
 
 .details {
   display: flex;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  .details {
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+    margin: 0px;
+    border: none;
+  }
+}
+
+.pokeAgendaContainer {
+  margin: 100px 0px;
+  width: 70%;
+  overflow: hidden;
+}
+.pokeAgendaContainer img {
+  width: 100%;
+}
+
+.pokeScreenBorder {
+  position: absolute;
+  width: 25%;
+  height: 20.5vw;
+  margin-left: 3%;
+  margin-top: 17%;
+  background-color: #eee;
+  border: 4px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.pokeScreen {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-color: #222;
+  border: 4px solid black;
+  border-radius: 10px;
+  z-index: 99;
+  padding: 10px;
+  overflow: auto;
+}
+
+.pokemonsImageDiv {
+  margin: 0px auto;
+  margin-top: -15px;
+  width: 40%;
+}
+.pokemonsImageDiv img {
+  width: 100%;
+}
+
+
+.screenContent {
+  margin-top: -20px;
+}
+
+.pokeAgendaImageDiv {
+  width: 100%;
+}
+.pokeAgendaImageDiv img {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .pokeAgendaContainer {
+    margin: 100px 0px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .pokeAgendaImageDiv {
+    width: 170vw;
+    overflow: hidden;
+  }
+
+  .pokeScreenBorder {
+    width: 70%;
+    height: 58vw;
+    margin-left: 5.5%;
+    margin-top: 41%;
+  }
+
+
 }

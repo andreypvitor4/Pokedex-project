@@ -1,6 +1,12 @@
 <div class="container">
 
-  <div class="cardsContainer" infiniteScroll [infiniteScrollDistance]="1" (scrolled)="onScrollDown()">
+  <div class="search">
+    <search></search>
+  </div>
+
+  <span *ngIf="!showFirstPokemons" class="temporaryBackgroundFiller"></span>
+
+  <div *ngIf="showFirstPokemons" class="cardsContainer" infiniteScroll [infiniteScrollDistance]="0.5" (scrolled)="onScrollDown()">
 
     <span *ngFor="let pokemon of pokemons">
       <a [routerLink]="['pokemon', pokemon.id]">

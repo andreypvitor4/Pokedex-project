@@ -1,0 +1,8 @@
+
+<span *ngFor="let item of pokemon.held_items">
+  <a [routerLink]="['/pokemon/' + pokemon.id + '/descricao', item.item.name, {type: 'item'}]">
+    <p>
+      {{ item.item.name }}
+    </p>
+  </a>
+</span>
