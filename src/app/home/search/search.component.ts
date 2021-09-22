@@ -18,11 +18,11 @@ export class SearchComponent implements OnInit {
 
   onSubmit(form: any) {
 
-      this.service.getPokemon(form.value.search).subscribe( data => {
+      this.service.getPokemon(form.value.search.toLowerCase()).subscribe( data => {
         this.pokemon = data
 
         if(!!data.name) {
-          this.route.navigate([`/pokemon/${form.value.search}`])
+          this.route.navigate([`/pokemon/${form.value.search.toLowerCase()}`])
         }
 
       }, () => {
